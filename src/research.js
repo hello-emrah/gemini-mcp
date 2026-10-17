@@ -56,7 +56,7 @@ function generateFilename(prompt, outputFilename, stamp) {
 }
 function frontmatter({ prompt, format, citationStyle, tone, interactionId, stamp }) {
   const title = prompt.split('\n')[0].slice(0, 100);
-  return `---\ntitle: ${title}\nslug: research-${interactionId.slice(0, 8)}\ntype: artefact\ncategory: research\nformat: ${format}\ncitation_style: ${citationStyle}\ntone: ${tone}\ninteraction_id: ${interactionId}\nproduced_by:\n  - "[[Sibyl]]"\ncreated: "[[${stamp}]]"\ntags:\n  - deep-research\n  - gemini\n---\n\n`;
+  return `---\ntitle: ${title}\nslug: research-${interactionId.slice(0, 8)}\ntype: artefact\ncategory: research\nformat: ${format}\ncitation_style: ${citationStyle}\ntone: ${tone}\ninteraction_id: ${interactionId}\nproduced_by:\n  - "[[Gemini MCP]]"\ncreated: "[[${stamp}]]"\ntags:\n  - deep-research\n  - gemini\n---\n\n`;
 }
 
 export async function deepResearch({ prompt, format = 'report', citation_style = 'harvard', tone = 'analytical', sections, format_instructions } = {}) {

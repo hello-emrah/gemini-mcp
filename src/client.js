@@ -27,9 +27,9 @@ export const MODELS = {
   research: process.env.GEMINI_RESEARCH_AGENT || 'deep-research-preview-04-2026',
 };
 
-export const OUTPUT_DIR = process.env.SIBYL_OUTPUT_DIR
-  ? expandPath(process.env.SIBYL_OUTPUT_DIR)
-  : `${homedir()}/Documents/sibyl-output`;
+export const OUTPUT_DIR = process.env.GEMINI_OUTPUT_DIR
+  ? expandPath(process.env.GEMINI_OUTPUT_DIR)
+  : `${homedir()}/Documents/gemini-output`;
 
 export function expandPath(p) {
   if (!p) return p;

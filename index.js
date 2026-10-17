@@ -19,7 +19,7 @@ const HANDLERS = Object.assign({}, ...MODULES.map((m) => m.handlers));
 
 // ─── Server ─────────────────────────────────────────────────────────────────
 const server = new Server(
-  { name: 'sibyl-mcp', version: '0.1.0' },
+  { name: 'gemini-mcp', version: '0.1.0' },
   { capabilities: { tools: {} } }
 );
 
@@ -39,4 +39,4 @@ server.setRequestHandler(CallToolRequestSchema, async (req) => {
 
 const transport = new StdioServerTransport();
 await server.connect(transport);
-console.error(`sibyl ready (${TOOLS.length} tools: text, image, video, speech, embed, research)`);
+console.error(`gemini ready (${TOOLS.length} tools: text, image, video, speech, embed, research)`);

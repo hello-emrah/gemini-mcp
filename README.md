@@ -1,12 +1,14 @@
 <div align="center">
 
-<img src="assets/logo.png" alt="Sibyl" width="160" />
+<img src="assets/logo.png" alt="Gemini MCP" width="160" />
 
-# Sibyl
+# Gemini MCP
 
-**The oracle for Google's Gemini.**
+*Formerly Sibyl.*
 
-Where Pythia speaks for OpenAI, Sibyl speaks for Gemini. One MCP across the whole generative surface: text, image, video, speech, embeddings, and deep research. Built for personal use, shared openly, not productised.
+**An MCP server for Google's Gemini.**
+
+One MCP across the whole generative surface: text, image, video, speech, embeddings, and deep research. Built for personal use, shared openly, not productised.
 
 <br/>
 
@@ -16,7 +18,7 @@ Where Pythia speaks for OpenAI, Sibyl speaks for Gemini. One MCP across the whol
 
 ---
 
-Sibyl is a local Model Context Protocol server wrapping Google's Gemini generative API. It folds the old nano-banana (image) and gemini-deep-research servers into one coherent Gemini surface, and adds text, video, speech and embeddings, so an assistant reaches everything Gemini generates through a single tool set.
+Gemini MCP is a local Model Context Protocol server wrapping Google's Gemini generative API. It folds the old nano-banana (image) and gemini-deep-research servers into one coherent Gemini surface, and adds text, video, speech and embeddings, so an assistant reaches everything Gemini generates through a single tool set.
 
 ## Tools
 
@@ -37,8 +39,8 @@ Sibyl is a local Model Context Protocol server wrapping Google's Gemini generati
 ## Install
 
 ```bash
-git clone https://github.com/hello-emrah/sibyl-mcp.git
-cd sibyl-mcp
+git clone https://github.com/hello-emrah/gemini-mcp.git
+cd gemini-mcp
 npm install
 ```
 
@@ -47,9 +49,9 @@ npm install
 ```json
 {
   "mcpServers": {
-    "sibyl": {
+    "gemini": {
       "command": "node",
-      "args": ["/absolute/path/to/sibyl-mcp/index.js"],
+      "args": ["/absolute/path/to/gemini-mcp/index.js"],
       "env": { "GEMINI_API_KEY": "your-key" }
     }
   }
@@ -63,11 +65,7 @@ npm install
 | `GEMINI_API_KEY` | Required. Your Gemini API key. |
 | `GEMINI_DEEP_RESEARCH_API_KEY` | Optional. A separate key for the research agent; falls back to `GEMINI_API_KEY`. |
 | `GEMINI_TEXT_MODEL` / `GEMINI_IMAGE_MODEL` / `GEMINI_VIDEO_MODEL` / `GEMINI_TTS_MODEL` / `GEMINI_EMBED_MODEL` | Optional model overrides; sensible current defaults otherwise. |
-| `SIBYL_OUTPUT_DIR` | Where research reports and embedding files land by default. |
-
-## Why "Sibyl"
-
-The Sibyl was the prophetess of the ancient world, an oracle with no temple of her own, a wandering voice of foresight who spoke the future in riddles. She is the twin to the Pythia: where Pythia spoke for Apollo at Delphi, Sibyl speaks for Gemini here. Fitting that the Gemini API, named for the twins, should fall to the oracle's twin.
+| `GEMINI_OUTPUT_DIR` | Where research reports and embedding files land by default. |
 
 ## Design philosophy
 
